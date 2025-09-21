@@ -81,28 +81,28 @@
 // Map of prompts to audio files
 const demoData = {
     "Bongos (Rising-Pause-Falling)": [
-    { file: "bongos_beatsvolume/control.flac", label: "LatCH-B" },
+    { file: "bongos_beatsvolume/control.flac", label: "Control" },
     { file: "bongos_beatsvolume/backsim.flac", label: "LatCH-B" },
     { file: "bongos_beatsvolume/forward.flac", label: "LatCH-F" },
     { file: "bongos_beatsvolume/readout.flac", label: "Readout" },
     { file: "bongos_beatsvolume/no-latent.flac", label: "E2E" },
   ],
     "Piano": [
-    { file: "piano_pitch/control.flac", label: "LatCH-B" },
+    { file: "piano_pitch/control.flac", label: "Control" },
     { file: "piano_pitch/backsim.flac", label: "LatCH-B" },
     { file: "piano_pitch/forward.flac", label: "LatCH-F" },
     { file: "piano_pitch/readout.flac", label: "Readout" },
     { file: "piano_pitch/no-latent.flac", label: "E2E" },
   ],
   "Violon Strings (Linear Increasing)": [
-    { file: "strings_pitchvolume/control.flac", label: "LatCH-B" },
+    { file: "strings_pitchvolume/control.flac", label: "Control" },
     { file: "strings_pitchvolume/backsim.flac", label: "LatCH-B" },
     { file: "strings_pitchvolume/forward.flac", label: "LatCH-F" },
     { file: "strings_pitchvolume/readout.flac", label: "Readout" },
     { file: "strings_pitchvolume/no-latent.flac", label: "E2E" },
   ],
   "Water droplets": [
-    { file: "water2_beats/control.flac", label: "LatCH-B" },
+    { file: "water2_beats/control.flac", label: "Control" },
     { file: "water2_beats/backsim.flac", label: "LatCH-B" },
     { file: "water2_beats/forward.flac", label: "LatCH-F" },
     { file: "water2_beats/readout.flac", label: "Readout" },
@@ -126,7 +126,7 @@ Object.entries(demoData).forEach(([prompt, files]) => {
     col.innerHTML = `
       <div><b>${f.label}</b></div>
       <audio controls>
-        <source src="selected/${prompt}/${f.file}" type="audio/flac">
+        <source src="${f.file}" type="audio/flac">
         Your browser does not support the audio element.
       </audio>
     `;
